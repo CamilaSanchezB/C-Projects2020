@@ -69,12 +69,14 @@ string CAhorcado::PonerAstericos(string ast, string p){
 }
 
 bool CAhorcado::EstaEnPalabra(string p, char l){	
+	bool rta=false;
 	for (int i=0; i<p.size(); i++){
 		if (p[i]==l){
 			puntos=puntos+20;
-			return true;
+			rta = true;
 		}
 	}
+	return rta;
 }
 
 string CAhorcado::ReemplazarAsterisco(string p, char l, string ast){
@@ -187,7 +189,7 @@ do{
 		cout<<"\tGAME OVER\nLa palabra era: "<<palabra<<endl;
 	}
 	else{
-		cout<<"\t¡Felicitaciones, ganaste!\n\tLa palabra era: "<<palabra<<endl;
+		cout<<"\tÂ¡Felicitaciones, ganaste!\n\tLa palabra era: "<<palabra<<endl;
 	}
 
 	cout<<"\n\t0-Salir\t\t1-Volver a jugar\n: ";cin>>op;
